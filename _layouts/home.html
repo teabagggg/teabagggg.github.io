@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    {%- for post in site.posts -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          ●
+        </a>
+    {%- endfor -%}
+  {%- endif -%}
+
+</div>
